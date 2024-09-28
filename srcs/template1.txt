@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   template.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: faguirre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/14 16:22:53 by faguirre          #+#    #+#             */
+/*   Updated: 2024/09/14 16:32:12 by faguirre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "macro_res.h"
+#include "libft.h"
+#include <stdio.h>
+
+
+static int	test(int print)
+{
+	int	my_res;
+	int	real_res;
+	int	fail;
+
+	my_res = ft_*();
+	real_res = *();
+	fail = my_res != real_res;
+	if (print >= 2)
+	{
+		printf("\t-test(%s): %s --> (%s) (%s)\n",
+				s1, TEST_RES(fail), my_res, real_res);
+	}
+	return (fail);
+}
+int     test_ft_*(char *title, int print)
+{
+	int	failed_tests;
+
+	if (print >= 1)
+	{
+		printf("\n%s\n", title);
+		printf("==============================\n");
+	}
+	failed_tests = 0;
+	failed_tests += test(print);
+
+	if (print >= 1)
+	{
+		if (!failed_tests)
+			printf("Result: OK\n");
+		else
+			printf("Result: FAIL\n");
+	}
+	return (failed_tests);
+}
