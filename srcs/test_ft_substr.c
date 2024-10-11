@@ -62,7 +62,7 @@ int     test_ft_substr(char *title, int print)
 	res = ft_substr("abcde", 5, 5);
 	failed_tests += test(print, "test(abcde, 5, 5)", res, ""); free(res);
 	res = ft_substr("abcde", 10, 1);
-	failed_tests += test(print, "test(abcde, 10, 1)", res, ""; free(res);
+	failed_tests += test(print, "test(abcde, 10, 1)", res, ""); free(res);
 
 	if (print >= 1)
 	{

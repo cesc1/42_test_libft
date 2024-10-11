@@ -35,7 +35,8 @@ static int	test(int print, char *print_fun, char *my_res, char *real_res)
 
 static char	f_add1(unsigned int i, char c)
 {
-	i = 0;
+	i = (unsigned int)c;
+	c = i;
 	return (c + 1);
 }
 
