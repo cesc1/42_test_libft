@@ -74,4 +74,4 @@ $(UNITY_DIR)/unity_internals.h: | $(UNITY_DIR)
 
 -include $(DEP)
 
-.PHONY: all test clean unity_init unity_clean
+.PHONY: all test $(LIBFT) clean unity_init unity_clean
