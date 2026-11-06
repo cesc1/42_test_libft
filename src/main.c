@@ -26,6 +26,7 @@ void    test_strdup(void);
 void	test_substr(void);
 void    test_strjoin(void);
 void    test_strtrim(void);
+void    test_split(void);
 
 void	setUp(void)
 {
@@ -66,5 +67,6 @@ int	main(void)
 	RUN_TEST(test_substr);
 	RUN_TEST(test_strjoin);
 	RUN_TEST(test_strtrim);
+	RUN_TEST(test_split);
 	return (UNITY_END());
 }
