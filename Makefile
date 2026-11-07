@@ -19,7 +19,7 @@ UNITY_FILES := $(addprefix $(UNITY_DIR)/,$(UNITY_FILES))
 
 UNITY_URL_BASE := https://raw.githubusercontent.com/ThrowTheSwitch/Unity/refs/heads/master/src
 
-CFLAGS := -I$(LIBFT_HEADER) -I$(TEST_DIR) -I$(UNITY_DIR) -MMD -MP -g
+CFLAGS := -I$(LIBFT_HEADER) -I$(TEST_DIR) -I$(UNITY_DIR) -MMD -MP -Wall -Wextra -Werror -g
 CLINKER := $(UNITY_DIR)/unity.c $(LIBFT) -lbsd
 
 # ------------------------------------------------------------------------

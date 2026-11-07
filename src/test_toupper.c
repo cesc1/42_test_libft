@@ -6,7 +6,7 @@ void	test_toupper(void)
 {
 	int	i;
 
-	i -11;
+	i = -1;
 	while (++i < 256)
 		TEST_ASSERT_EQUAL(toupper(i), ft_toupper(i));
 }

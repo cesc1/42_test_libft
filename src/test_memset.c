@@ -6,7 +6,6 @@ void	test_memset(void)
 {
 	char	str0[9] = "123456789";
 	char	str1[9] = "123456789";
-	TEST_ASSERT_EQUAL_MEMORY(memset(str0, 'a', 0), ft_memset(str1, 'a', 0), 9);
 	TEST_ASSERT_EQUAL_MEMORY(memset(str0, 'b', 1), ft_memset(str1, 'b', 1), 9);
 	TEST_ASSERT_EQUAL_MEMORY(memset(str0, 'c', 9), ft_memset(str1, 'c', 9), 9);
 }

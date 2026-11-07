@@ -30,6 +30,10 @@ void    test_split(void);
 void	test_itoa(void);
 void	test_strmapi(void);
 void	test_striteri(void);
+void	test_putchar(void);
+void	test_putstr(void);
+void	test_putendl(void);
+void	test_putnbr(void);
 
 void	setUp(void)
 {
@@ -74,5 +78,9 @@ int	main(void)
 	RUN_TEST(test_itoa);
 	RUN_TEST(test_strmapi);
 	RUN_TEST(test_striteri);
+	RUN_TEST(test_putchar);
+	RUN_TEST(test_putstr);
+	RUN_TEST(test_putendl);
+	RUN_TEST(test_putnbr);
 	return (UNITY_END());
 }

@@ -4,6 +4,7 @@
 
 void	transformer(unsigned int i, char *c)
 {
+	(void)i;
 	if (*c >= 'a' && *c <= 'z')
 		*c -= 32;
 }
