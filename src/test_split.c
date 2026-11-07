@@ -38,7 +38,7 @@ void	test_split(void)
 	helper_split("  Hola que tal", ' ', res2);
 	helper_split("Hola que tal    ", ' ', res2);
 	helper_split("Hola   que    tal    ", ' ', res2);
-	// Only 1 split with ending starting char
+	// Ending starting char
 	helper_split(" Hola ", ' ', res1);
 	helper_split("        Hola       ", ' ', res1);
 }
