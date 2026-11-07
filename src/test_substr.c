@@ -2,7 +2,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	helper_substr(char const *s, unsigned int start, size_t len,
+static void	helper_substr(char const *s, unsigned int start, size_t len,
 					  char *res_orig)
 {
 	char	*res_mine;

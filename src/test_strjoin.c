@@ -2,7 +2,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	helper_strjoin(char const *s1, char const *s2, char *expected)
+static void	helper_strjoin(char const *s1, char const *s2, char *expected)
 {
 	char	*result;
 

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-void	helper_strdup(char *str)
+static void	helper_strdup(char *str)
 {
 	char	*res_orig;
 	char	*res_mine;

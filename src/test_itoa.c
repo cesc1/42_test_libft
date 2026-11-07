@@ -2,7 +2,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	helper_itoa(int n, char *expected)
+static void	helper_itoa(int n, char *expected)
 {
 	char	*result;
 

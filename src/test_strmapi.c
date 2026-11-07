@@ -2,14 +2,14 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char	transformator(unsigned int i, char c)
+static char	transformator(unsigned int i, char c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }
 
-void	helper_strmapi(char const *s,
+static void	helper_strmapi(char const *s,
 					   char (*f)(unsigned int, char), char *expected)
 {
 	char	*result;

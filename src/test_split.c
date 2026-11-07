@@ -2,7 +2,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	helper_split(char const *s, char c, char **expected)
+static void	helper_split(char const *s, char c, char **expected)
 {
 	char	**result;
 	int		i;

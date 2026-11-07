@@ -29,6 +29,7 @@ void    test_strtrim(void);
 void    test_split(void);
 void	test_itoa(void);
 void	test_strmapi(void);
+void	test_striteri(void);
 
 void	setUp(void)
 {
@@ -72,5 +73,6 @@ int	main(void)
 	RUN_TEST(test_split);
 	RUN_TEST(test_itoa);
 	RUN_TEST(test_strmapi);
+	RUN_TEST(test_striteri);
 	return (UNITY_END());
 }

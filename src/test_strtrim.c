@@ -2,7 +2,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	helper_strtrim(char const *s1, char const *set, char *expected)
+static void	helper_strtrim(char const *s1, char const *set, char *expected)
 {
 	char	*result;
 
