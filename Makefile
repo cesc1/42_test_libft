@@ -19,7 +19,9 @@ UNITY_FILES := $(addprefix $(UNITY_DIR)/,$(UNITY_FILES))
 
 UNITY_URL_BASE := https://raw.githubusercontent.com/ThrowTheSwitch/Unity/refs/heads/master/src
 
-CFLAGS := -I$(LIBFT_HEADER) -I$(TEST_DIR) -I$(UNITY_DIR) -MMD -MP -Wall -Wextra -Werror -g
+CFLAGS := -I$(LIBFT_HEADER) -I$(TEST_DIR) -I$(UNITY_DIR) -MMD -MP -Wall -Wextra -Werror
+CFLAGS_DEBUG = -g
+#CFLAGS_MEMORY = -fsanitize=address -fno-omit-frame-pointer
 CLINKER := $(UNITY_DIR)/unity.c $(LIBFT) -lbsd
 
 # ------------------------------------------------------------------------
@@ -33,14 +35,14 @@ CLINKER := $(UNITY_DIR)/unity.c $(LIBFT) -lbsd
 all: test
 
 test: $(UNITY_FILES) $(LIBFT) $(OBJ)
-	cc $(OBJ) $(CLINKER) -g -o $(NAME)
+	cc $(OBJ) $(CLINKER) $(CFLAGS_MEMORY) -o $(NAME)
 	./$(NAME)
 
 $(LIBFT):
 	@$(MAKE) --no-print-directory -C ../.
 
 $(OBJ_DIR)/%.o: $(TEST_DIR)/%.c | $(OBJ_DIR)
-	cc $(CFLAGS) -c -o $@ $<
+	cc $(CFLAGS) $(CFLAGS_DEBUG) $(CFLAGS_MEMORY) -c -o $@ $<
 
 $(OBJ_DIR):
 	mkdir -p $@

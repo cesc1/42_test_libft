@@ -36,6 +36,10 @@ void	test_putendl(void);
 void	test_putnbr(void);
 void	test_lstnew(void);
 void	test_lstadd_front(void);
+void	test_lstsize(void);
+void	test_lstlast(void);
+void	test_lstadd_back(void);
+void	test_lstclear(void);
 
 void	setUp(void)
 {
@@ -86,5 +90,9 @@ int	main(void)
 	RUN_TEST(test_putnbr);
 	RUN_TEST(test_lstnew);
 	RUN_TEST(test_lstadd_front);
+	RUN_TEST(test_lstsize);
+	RUN_TEST(test_lstlast);
+	RUN_TEST(test_lstadd_back);
+	RUN_TEST(test_lstclear);
 	return (UNITY_END());
 }

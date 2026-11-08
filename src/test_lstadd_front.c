@@ -7,8 +7,10 @@ void	test_lstadd_front(void)
 	t_list	*list;
 	t_list	*add;
 
-	list = ft_lstnew("0");
-	TEST_ASSERT_NOT_NULL(list);
+	list = NULL;
+	add = ft_lstnew("0");
+	TEST_ASSERT_NOT_NULL(add);
+	ft_lstadd_front(&list, add);
 	add = ft_lstnew("1");
 	TEST_ASSERT_NOT_NULL(add);
 	ft_lstadd_front(&list, add);
