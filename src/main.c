@@ -40,6 +40,8 @@ void	test_lstsize(void);
 void	test_lstlast(void);
 void	test_lstadd_back(void);
 void	test_lstclear(void);
+void	test_lstiter(void);
+void	test_lstmap(void);
 
 void	setUp(void)
 {
@@ -94,5 +96,7 @@ int	main(void)
 	RUN_TEST(test_lstlast);
 	RUN_TEST(test_lstadd_back);
 	RUN_TEST(test_lstclear);
+	RUN_TEST(test_lstiter);
+	RUN_TEST(test_lstmap);
 	return (UNITY_END());
 }
