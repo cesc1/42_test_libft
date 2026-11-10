@@ -15,7 +15,7 @@ static void	assert_file_content(char *filename, char *expected)
 	fd = open(filename, O_RDONLY);
 	TEST_ASSERT_TRUE_MESSAGE(fd >= 0, "Could not open file");
 	n = ft_strlen(expected);
-	buffer = (char *)malloc(n);
+	buffer = (char *)malloc(n + 1);
 	TEST_ASSERT_NOT_NULL(buffer);
 	bytes_read = read(fd, buffer, n + 1);
 	TEST_ASSERT_EQUAL_INT(n, bytes_read);
